@@ -22,14 +22,14 @@
           <li class="mr-3">
             <a
               class="inline-block py-2 px-4 text-black font-bold no-underline"
-              href="#"
+              href="/"
               >Home</a
             >
           </li>
           <li class="mr-3">
             <a
               class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-              href="#"
+              href="/topUser"
               >Top User by Country</a
             >
           </li>
@@ -37,7 +37,7 @@
             <button>
               <a
               class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-              href="#"
+              href="/topRepositories"
               >Top Repositories</a
             >
             </button>
@@ -45,7 +45,7 @@
           <li class="mr-3">
             <a
               class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-              href="#"
+              href="/dataVisualisation"
               >Data Visualization</a
             >
           </li>

@@ -1,7 +1,6 @@
 <template>
 <div class="mt-2">
 <div class="flex items-center justify-center ">
-    <h2 class="text-black font-serif m-8">Search By User</h2>
     <div class="flex border-2 border-gray-200 rounded">
         <input v-model="searchWord" type="text" class="px-4 py-2 w-80 text-black" placeholder="Search...">
         <button v-on:click="search()" class="px-4 text-white bg-gray-600 border-l ">
@@ -9,7 +8,7 @@
         </button>
     </div>
 </div>
-    <div>
+    <!-- <div>
         <table>
             <thead>
                 <tr>
@@ -24,7 +23,33 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
+    <table class="table-auto">
+  <thead class="text-black">
+    <tr>
+      <th>hiii</th>
+      <th>Artist</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="text-black">
+      <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+      <td>Malcolm Lockyer</td>
+      <td>1961</td>
+    </tr>
+    <tr class="text-black">
+      <td>Witchy Woman</td>
+      <td>The Eagles</td>
+      <td>1972</td>
+    </tr>
+    <tr class="text-black">
+      <td>Shining Star</td>
+      <td>Earth, Wind, and Fire</td>
+      <td>1975</td>
+    </tr>
+  </tbody>
+</table>
 </div>
 </template>
 
@@ -32,12 +57,13 @@
 export default {
     data () {
         return {
-           searchWord : ''
+           searchWord : '',
+           searchData: {}
         }
     },
     methods: {
         search (){
-            console.log(this.searchWord)
+              console.log(this.searchWord)
             fetch(`https://api.github.com/search/users?q=${this.searchWord}`, {
                 method: 'GET'
             }).then(response => response.json()).then( function (data) {
@@ -47,5 +73,4 @@ export default {
         }
     }
 }
-
 </script>
