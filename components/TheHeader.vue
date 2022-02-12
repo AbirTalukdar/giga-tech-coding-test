@@ -1,5 +1,5 @@
 <template>
-  <nav :class="headerClassList" class="w-full z-30 top-0">
+  <nav :class="headerClassList" class="w-full z-30 top-0 mb-2">
     <div
       class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2"
     >
@@ -34,11 +34,13 @@
             >
           </li>
           <li class="mr-3">
-            <a
+            <button>
+              <a
               class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
               href="#"
               >Top Repositories</a
             >
+            </button>
           </li>
           <li class="mr-3">
             <a
