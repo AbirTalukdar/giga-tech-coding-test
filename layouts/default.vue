@@ -1,7 +1,7 @@
 <template>
   <div class="leading-normal tracking-normal text-white gradient">
     <the-header />
-    <div class="m-5">
+    <div class="fixed justify-center">
       <nuxt />
     </div>
     <the-footer />
