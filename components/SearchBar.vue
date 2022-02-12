@@ -8,25 +8,7 @@
         </button>
     </div>
 </div>
-<table class="table">
-    <thead class="bg-black">
-      <tr>
-        <th>#</th>
-        <th>First</th>
-        <th>Last</th>
-        <th>Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-    </tbody>
-  </table>  
-    <!-- <div>
+<div class="bg-amber-100">
         <table>
             <thead>
                 <tr>
@@ -41,7 +23,7 @@
                 </tr>
             </tbody>
         </table>
-    </div> -->
+    </div>
     <!-- <table class="table-auto">
     <thead class="text-black">
         <tr>
@@ -90,9 +72,9 @@ export default {
                 // console.log();
                 // Now we need to bind this data to our table element to show all the results
             })
-            this.searchData.forEach(function(items, index)  {
-                console.log(items, index)
-                });
+            // this.searchData.forEach(function(items, index)  {
+            //     console.log(items, index)
+            //     });
             }
         }
 }
