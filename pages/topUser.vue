@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="justify-center">
         <h2 class="text-black font-serif">Top User</h2>
         <search />
     </div>

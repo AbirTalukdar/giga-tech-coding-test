@@ -1,10 +1,12 @@
 <template>
-  <div class="leading-normal tracking-normal text-white gradient">
+  <div class="relative leading-normal tracking-normal text-white gradient">
     <the-header />
-    <div class="fixed justify-center">
+    <div class="absolute scroll-smooth justify-center">
       <nuxt />
     </div>
-    <the-footer />
+    <div class="absolute">
+      <the-footer />
+    </div>
   </div>
 </template>
 

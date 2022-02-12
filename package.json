@@ -16,6 +16,7 @@
     "test:dev": "jest --watch"
   },
   "dependencies": {
+    "axios": "^0.25.0",
     "nuxt": "^2.14.3",
     "nuxt-svg-loader": "^1.2.0"
   },

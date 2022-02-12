@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="content-center">
         <h2 class="text-black font-serif">Top Repositories</h2>
         <search />
     </div>

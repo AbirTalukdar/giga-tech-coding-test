@@ -8,6 +8,24 @@
         </button>
     </div>
 </div>
+<table class="table">
+    <thead class="bg-black">
+      <tr>
+        <th>#</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+    </tbody>
+  </table>  
     <!-- <div>
         <table>
             <thead>
@@ -24,32 +42,32 @@
             </tbody>
         </table>
     </div> -->
-    <table class="table-auto">
-  <thead class="text-black">
-    <tr>
-      <th>hiii</th>
-      <th>Artist</th>
-      <th>Year</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="text-black">
-      <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-      <td>Malcolm Lockyer</td>
-      <td>1961</td>
-    </tr>
-    <tr class="text-black">
-      <td>Witchy Woman</td>
-      <td>The Eagles</td>
-      <td>1972</td>
-    </tr>
-    <tr class="text-black">
-      <td>Shining Star</td>
-      <td>Earth, Wind, and Fire</td>
-      <td>1975</td>
-    </tr>
-  </tbody>
-</table>
+    <!-- <table class="table-auto">
+    <thead class="text-black">
+        <tr>
+        <th>{{searchData.items}}</th>
+        <th>Artist</th>
+        <th>Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="text-black">
+        <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+        <td>Malcolm Lockyer</td>
+        <td>1961</td>
+        </tr>
+        <tr class="text-black">
+        <td>Witchy Woman</td>
+        <td>The Eagles</td>
+        <td>1972</td>
+        </tr>
+        <tr class="text-black">
+        <td>Shining Star</td>
+        <td>Earth, Wind, and Fire</td>
+        <td>1975</td>
+        </tr>
+    </tbody>
+    </table> -->
 </div>
 </template>
 
@@ -58,19 +76,24 @@ export default {
     data () {
         return {
            searchWord : '',
-           searchData: {}
+           searchData: []
         }
     },
     methods: {
-        search (){
-              console.log(this.searchWord)
-            fetch(`https://api.github.com/search/users?q=${this.searchWord}`, {
-                method: 'GET'
-            }).then(response => response.json()).then( function (data) {
-                console.log(data);
+        search (){ 
+            fetch(`https://api.github.com/search/users?q=${this.searchWord}`, { method: 'GET'})
+            .then(response => response.json()).then( function (data) {
+                console.log(data.items[0].id);
+                let searchData = data.items;
+                console.log(searchData)
+                // let searchData = data.items;
+                // console.log();
                 // Now we need to bind this data to our table element to show all the results
             })
+            this.searchData.forEach(function(items, index)  {
+                console.log(items, index)
+                });
+            }
         }
-    }
 }
 </script>
