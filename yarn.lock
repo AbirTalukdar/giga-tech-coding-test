@@ -5935,6 +5935,11 @@
   "resolved" "https://registry.npmjs.org/joycon/-/joycon-2.2.5.tgz"
   "version" "2.2.5"
 
+"jquery@^3.1.1":
+  "integrity" "sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw=="
+  "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz"
+  "version" "3.6.0"
+
 "js-beautify@^1.6.12":
   "integrity" "sha512-a26B+Cx7USQGSWnz9YxgJNMmML/QG2nqIaL7VVYPCXbqiKz8PN0waSNvroMtvAK6tY7g/wPdNWGEP+JTNIBr6A=="
   "resolved" "https://registry.npmjs.org/js-beautify/-/js-beautify-1.11.0.tgz"
@@ -10148,6 +10153,14 @@
   "resolved" "https://registry.npmjs.org/vue-client-only/-/vue-client-only-2.0.0.tgz"
   "version" "2.0.0"
 
+"vue-easy-pie-chart@^1.0.3":
+  "integrity" "sha1-F2Bv0V0iYrJiStSIwJG3hbgz350="
+  "resolved" "https://registry.npmjs.org/vue-easy-pie-chart/-/vue-easy-pie-chart-1.0.3.tgz"
+  "version" "1.0.3"
+  dependencies:
+    "jquery" "^3.1.1"
+    "vue" "^2.1.0"
+
 "vue-hot-reload-api@^2.3.0":
   "integrity" "sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog=="
   "resolved" "https://registry.npmjs.org/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz"
@@ -10229,7 +10242,7 @@
   "resolved" "https://registry.npmjs.org/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz"
   "version" "1.9.1"
 
-"vue@^2.0.0", "vue@^2.6.11", "vue@^2.x", "vue@2.x":
+"vue@^2.0.0", "vue@^2.1.0", "vue@^2.6.11", "vue@^2.x", "vue@2.x":
   "integrity" "sha512-uhmLFETqPPNyuLLbsKz6ioJ4q7AZHzD8ZVFNATNyICSZouqP2Sz0rotWQC8UNBF6VGSCs5abnKJoStA6JbCbfg=="
   "resolved" "https://registry.npmjs.org/vue/-/vue-2.6.12.tgz"
   "version" "2.6.12"

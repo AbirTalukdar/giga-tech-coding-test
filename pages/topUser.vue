@@ -4,6 +4,27 @@
             <h2 class="text-black font-serif m-4">Top User</h2>
             <search @search="search"/>
         </div>
+        <!-- <div>
+            <h2>A basic HTML table</h2>
+                <table style="width:100%">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Company</th>
+                        <th lass="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Contact</th>
+                        <th lass="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Country</th>
+                    </tr>
+                    <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                    </tr>
+                    <tr>
+                        <td>Centro comercial Moctezuma</td>
+                        <td>Francisco Chang</td>
+                        <td>Mexico</td>
+                    </tr>
+                </table>
+                <p>To undestand the example better, we have added borders to the table.</p>
+        </div> -->
         <!-- <table class="table-auto">
             <thead class="text-black">
                 <tr>
@@ -20,50 +41,74 @@
                 </tr>
             </tbody>
         </table> -->
-        <div class="flex flex-col">
-        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                <table class="min-w-full divide-y divide-gray-200">
+        <div class="flex flex-col w-full">
+        <div class="my-2 overflow-x-auto">
+            <div class="py-2 align-middle inline-block min-w-full">
+            <div class="shadow overflow-hidden border-b border-green-500 sm:rounded-lg">
+                <table class="">
                 <thead class="bg-gray-50">
                     <tr>
-                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Avatar</th>
-                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
-                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Events</th>
-                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">followers</th>
-                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">following</th>
-                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">gists</th>
-                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">gravatar</th>
-                    
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Avatar</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">ID</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Events</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">followers</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">following</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">gists</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">gravatar</th>
                     </tr>
                 </thead>
-                <tbody class="bg-white divide-y divide-gray-200">
+                <tbody class="bg-transparent divide-y divide-gray-200">
                     <tr v-for="item in searchData" :key="item.id">
-                    <td class="px-6 py-4 whitespace-nowrap">
-                        <div class="flex items-center">
-                        <div class="flex-shrink-0 h-10 w-10">
-                            {{item.avatar_url}}
-                        </div>
-                        <div class="ml-4">
-                            <div class="text-sm font-medium text-gray-900">{{item.starred_url}}</div>
-                            <div class="text-sm text-gray-500">jane.cooper@example.com</div>
-                        </div>
-                        </div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                        <div class="text-sm text-gray-900">Regional Paradigm Technician</div>
-                        <div class="text-sm text-gray-500">Optimization</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"> Active </span>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Admin</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
-                    </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 h-10 w-10 text-black">
+                                    {{item.avatar_url}}
+                                </div>
+                            </div>
+                        </td>
+                        <!-- <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 h-10 w-10 text-black">
+                                    {{item.events_url}}
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 h-10 w-10 text-black">
+                                    {{item.followers_url}}
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 h-10 w-10 text-black">
+                                    {{item.following_url}}
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 h-10 w-10 text-black">
+                                    {{item.gists_url}}
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 h-10 w-10 text-black">
+                                    {{item.gravatar_id}}
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 h-10 w-10 text-black">
+                                    {{item.html_url}}
+                                </div>
+                            </div>
+                        </td> -->
                     </tr>
-
-                    <!-- More people... -->
                 </tbody>
                 </table>
             </div>
@@ -72,6 +117,13 @@
         </div>
     </div>
 </template>
+
+<style>
+    table, th, td {
+        border:1px solid black;
+    }
+</style>
+
 <script>
 import Search from '@/components/SearchBar'
 export default {

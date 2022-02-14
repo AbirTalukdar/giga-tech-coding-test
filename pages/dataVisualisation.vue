@@ -1,14 +1,17 @@
 <template>
-    <div>
+    <div class="flex">
         <h2 class="text-black font-serif">Data Visualisation</h2>
-        <search />
+        <div class="items-center">
+            <vue-easy-pie-chart :percent="6"></vue-easy-pie-chart>
+        </div>
     </div>
 </template>
 <script>
-import Search from '@/components/SearchBar'
+import VueEasyPieChart from 'vue-easy-pie-chart'
+import 'vue-easy-pie-chart/dist/vue-easy-pie-chart.css'
 export default {
     components: {
-    search: Search
+    VueEasyPieChart 
   }
 }
 </script>
