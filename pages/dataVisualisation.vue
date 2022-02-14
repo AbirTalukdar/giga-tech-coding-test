@@ -1,8 +1,9 @@
 <template>
     <div class="flex">
-        <h2 class="text-black font-serif">Data Visualisation</h2>
-        <div class="items-center">
-            <vue-easy-pie-chart :percent="percent"></vue-easy-pie-chart>
+        <h2 class="text-black font-serif m-2">Data Visualisation</h2>
+        <div class="m-2 text-black">
+            <vue-easy-pie-chart :percent="percent" :size="330">
+            </vue-easy-pie-chart>
         </div>
     </div>
 </template>
@@ -18,7 +19,8 @@ export default {
   },
   data() {
       return {
-          percent: '0',
+          percent: 0,
+          font: "20px"
       };
   },
   methods: {
@@ -36,6 +38,7 @@ export default {
                     }
                 });
                 this.percent = parseInt((male/(male+female)) * 100)
+                console.log(this.percent)
             })
             }
         }
