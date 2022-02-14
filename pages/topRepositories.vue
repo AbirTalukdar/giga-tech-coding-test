@@ -4,6 +4,40 @@
             <h2 class="text-black font-serif m-4">Top Repositories</h2>
             <search @search="search"/>
         </div>
+        <div class="flex flex-col w-auto">
+        <div class="my-2 overflow-x-auto">
+            <div class="py-2 align-middle inline-block min-w-full">
+            <div class="shadow border-b border-green-500 sm:rounded-lg">
+                <table class="">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Avatar</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">ID</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-transparent divide-y divide-gray-200" v-for="item in searchData" :key="item.id">
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 h-10 w-10 text-black">
+                                    {{item.name}}
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 h-10 w-10 text-black">
+                                    {{item.description}}
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+        </div>
     </div>
 </template>
 <script>
